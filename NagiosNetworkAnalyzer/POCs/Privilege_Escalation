@@ -1,0 +1,7 @@
+Default Sudo Permissions Granted to Normal User in Nagios Network Analyzer VM Appliance
+
+Affected Component: /usr/local/nagioslogserver/scripts/
+
+In the default VM appliance of Nagios Network Analyzer, normal user (nna) is erroneously assigned sudo permissions, potentially allowing unauthorized privilege escalation and system compromise. This flaw requires immediate attention to mitigate potential security breaches.
+
+Nagios Network Analyzer VM's default setup grants the "nna" user sudo permissions to execute specific scripts. These permissions can be exploited to alter script behaviors, enabling a Privilege Escalation Attack. Thus, even with/without password changes, a normal user can escalate to Superuser (root), gaining full system control through the misuse of sudo rights.
