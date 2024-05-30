@@ -1,0 +1,9 @@
+Insecure Permissions vulnerability in Nagios Network Analyzer v.2024R1.02-64 and before allows a local attacker to escalate privileges via the remove_source.sh component.
+
+Nagios Network Analyzer VM's default setup grants the "nna" user sudo permissions to execute specific scripts. These permissions can be exploited to alter script behaviors, enabling a Privilege Escalation Attack. Thus, even with/without password changes, a normal user can escalate to Superuser (root), gaining full system control through the misuse of sudo rights.
+
+Affected Component:
+ /usr/local/nagiosna/scripts/remove_source.sh
+
+Confirmation by the Vendor: https://www.nagios.com/changelog/#network-analyzer
+
